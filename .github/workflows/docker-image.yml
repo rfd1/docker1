@@ -22,14 +22,14 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
     - name: Build first Docker image
-      run: docker build . --file Dockerfile1 --tag rfd1/cms1:${{ github.sha }}
+      run: docker build . --file Dockerfile1 --tag rfd1/cms1:latest
 
     - name: Push first docker image
-      run: docker push rfd1/cms1:${{ github.sha }}
+      run: docker push rfd1/cms1:latest
 
     - name: Build second Docker image
-      run: docker build . --file Dockerfile1-latex --tag rfd1/cms1-latex:${{ github.sha }}
+      run: docker build . --file Dockerfile1-latex --tag rfd1/cms1-latex:latest
 
     - name: Push second docker image
-      run: docker push rfd1/cms1-latex:${{ github.sha }}
+      run: docker push rfd1/cms1-latex:latest
       
