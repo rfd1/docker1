@@ -3,5 +3,5 @@ FROM rfd1/cms1
 USER root
 
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install texlive 
-RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get -y install texlive-publishers texlive-science texlive-fonts-extra
+RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get -y install texlive-publishers texlive-science texlive-fonts-extra latexdiff
 RUN apt-get update && apt-get upgrade -y && apt-get autoclean && apt-get autoremove
