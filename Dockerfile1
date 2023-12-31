@@ -7,6 +7,6 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install \
         git gcc g++ gfortran patch make \
         liblapack-dev libblas-dev libopenmpi-dev \
         python3 python3-distutils valgrind \
-        libboost-all-dev python3-pip ffmpeg vim doxygen cm-super dvipng libmodbus-dev
+        libboost-all-dev python3-pip ffmpeg vim doxygen graphviz cm-super dvipng libmodbus-dev
 RUN python3 -m pip install --upgrade pip scipy numpy pandas numba matplotlib pytest sympy
 RUN apt-get update && apt-get upgrade -y && apt-get autoclean && apt-get autoremove
